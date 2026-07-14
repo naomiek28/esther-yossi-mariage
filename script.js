@@ -121,3 +121,31 @@ createGoogleCalendarLink();
 updateCountdown();
 setInterval(updateCountdown, 1000);
 updateMusicButton();
+function setupScrollReveal() {
+  const elements = document.querySelectorAll(".arch-card, .text-card, .logo-separator");
+
+  elements.forEach((element) => {
+    element.classList.add("reveal-on-scroll");
+  });
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.18,
+      rootMargin: "0px 0px -8% 0px",
+    }
+  );
+
+  elements.forEach((element) => {
+    observer.observe(element);
+  });
+}
+
+setupScrollReveal();
