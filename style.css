@@ -710,3 +710,13 @@ body.invitation-open .invitation-flow {
     margin-top: 92px;
   }
 }
+body.invitation-open::before {
+  background-image: url("images/background-invitation.jpeg");
+  background-size: cover;
+  background-position: center top;
+  filter: brightness(0.94) saturate(0.96);
+}
+
+body.invitation-open::after {
+  background: rgba(61, 42, 34, 0.06);
+}
