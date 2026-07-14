@@ -714,7 +714,7 @@ body.invitation-open::before {
   background-image: url("images/background-invitation.jpeg");
   background-size: cover;
   background-position: center top;
-  filter: brightness(0.94) saturate(0.96);
+  filter: brightness(0.91) saturate(0.96);
 }
 
 body.invitation-open::after {
